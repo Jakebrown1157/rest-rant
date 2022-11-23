@@ -37,3 +37,23 @@ node modules: method-overide, dotenv, express-react-views
 | state | Nevada |
 | Cuisines | Mexican |
 | pic | https://images.unsplash.com/photo-1494233914995-8c8b438d3f60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJlc3R1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60 |
+
+# rants
+
+| Field | Type |
+| :----- | :----- |
+| _id | object ID |
+| place_id | ref(places) Object_ID |
+| rant | boolean |
+| rating | Number |
+| comment | String |
+| reviewer | String |
+
+Planing 
+
+User Stories 
+
+WireFrames 
+
+
+Notes 
