@@ -6,7 +6,13 @@ router.get('/', (req, res) => {
         city: 'las Vegas',
         state: 'Nevada',
         Cuisines: 'Mexican',
-        pic: 'http://placekitten.com/250/250'
+        pic: '/images/resturant.png'
+    },{
+        name: 'Coding cat cafe',
+        city: 'Phoenix',
+        state: 'AZ',
+        Cuisines: 'coffie, bakery',
+        pic: '/images/resturant2.png'
     }]
     res.render('places/index', { places })
 })
