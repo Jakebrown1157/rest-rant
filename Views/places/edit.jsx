@@ -28,7 +28,7 @@ function edit_form (data) {
                     <label htmlFor="cusines">Cusines</label>
                     <input id="cusines"/>
                 </div>
-                <input className="btn btn-primary" type="submit" value="Add Place" />
+                <input className="btn btn-primary" type="submit" value="submit changes" />
             </div>
             </form>
           </main>
