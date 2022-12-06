@@ -1,15 +1,12 @@
-let places = [{
-    name: 'la esquina',
-    city: 'las Vegas',
-    state: 'Nevada',
-    Cuisines: 'Mexican',
-    pic: '/images/resturant.png'
-},{
-    name: 'Coding cat cafe',
-    city: 'Phoenix',
-    state: 'AZ',
-    Cuisines: 'coffie, bakery',
-    pic: '/images/resturant2.png'
-}]
+const mongoose = require('mongoose')
 
-module.exports = places
+const placeSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  pic: String,
+  cuisines: { type: String, required: true },
+  city: { type: String, default: 'Anytown' },
+  state: { type: String, default: 'USA' },
+  founded: Number
+})
+
+module.exports = mongoose.model('Place', placeSchema)

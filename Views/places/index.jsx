@@ -6,12 +6,12 @@ function index (data) {
     return (
       <div className="col-sm-6">
         <h2>
-          <a href={`/places/${index}`} >
+          <a href={`/places/${place.id}`} >
             {place.name}
           </a>
         </h2>
         <p className="text-center">
-          {place.cuisines}
+          {place.cusines}
         </p>
         <img src={place.pic} alt={place.name} />
         <p className="text-center">
