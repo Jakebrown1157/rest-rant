@@ -1,59 +1,30 @@
-# Project REST-Rant
+# Routes
 
-REST-Rant is an app where users can review restaurants.
+| Method |  Path   |       Purpose       |
+| :----- | :------ | :------------------ |
+|  GET   |    /    | Home page |
+|  GET   | /places | Places index page |
+|  POST  | /places |    Create new place |
+|  GET   | /PLACES NEW | Form page for creating a new place |
+|  GET   | /places/:id | Details about a particular place |
+|  PUT   | /places/:id | Update a particular place |
+|  GET   | /places/:id/edit | Form page for editing an existing place |
+|  DELETE | /places/:id | Delete a particular place |
+|  POST  | /places/:id/rant | Create a rant (comment) about a particular place |
+|  DELETE | /places/:id/rant/:rantId | Delete a rant (comment) about a particular place |
+|  GET   |    *    | 404 page (matches any route not defined above) |
 
-coding languages 
+# Database
 
-CSS Framework: Bootstrap
+places
 
-Stack: MongoDB, Express, NodeJS
-
-Server-Side Rendering: JSX
-
-node modules: method-overide, dotenv, express-react-views
-
-# Paths
-
-| method | Path | purpose |
-| :------ | :------ | :------ |
-| Get | / | Home Page |
-| Get | /places | Places index page |
-| POST | /places | Create new place |
-| Get | /places/new | Form page for creating a new page |
-| Get | /places/:id | Details about a particular place |
-| Put | /places/:id | Update a particular place |
-| Get | /places/:id/edit | Form page for editing an exsisting page |
-| Delete | /places/:id | Delete a particular place |
-| POST | /places/:id/rant | Create a rant (comment) about a particular place |
-| Delete | /places/:id/rand/randId | Delete a rand (comment) about a particular place |
-| Get | * | 404 page (matches any rout not defined abo) |
-
-# places
-
-| Field | Type |
-| :----- | :----- |
-| name | la esquina |
-| city | Las Vegas |
-| state | Nevada |
-| Cuisines | Mexican |
-| pic | https://images.unsplash.com/photo-1494233914995-8c8b438d3f60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJlc3R1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60 |
-
-# rants
-
-| Field | Type |
-| :----- | :----- |
-| _id | object ID |
-| place_id | ref(places) Object_ID |
-| rant | boolean |
-| rating | Number |
-| comment | String |
-| reviewer | String |
-
-Planing 
-
-User Stories 
-
-WireFrames 
+| Field Name | Data Type |
+| :---- | :--- |
+| name  | 'H-Thai-ML' |
+| city  | 'Seattle' |
+| state | 'WA' |
+| cuisines | 'Thai, Pan-Asian' |
+| pic   | 'http://placekitten.com/250/250' |
 
 
-Notes 
+

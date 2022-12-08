@@ -5,7 +5,7 @@ db.Place.create([{
     city: 'Seattle',
     state: 'WA',
     cuisines: 'Thai, Pan-Asian',
-    pic: '/images/h-thai-ml-tables.jpg',
+    pic: '/images/thailand.jpg',
     founded: 1989
 }, {
     name: 'Coding Cat Cafe',
@@ -15,11 +15,11 @@ db.Place.create([{
     pic: '/images/coffee-cat.jpg',
     founded: 2020
 }])
-.then(() => {
-    console.log('Success!')
-    process.exit()
-})
-.catch(err => {
-    console.log('Failure!', err)
-    process.exit()
-})
+    .then(() => {
+        console.log('Success!')
+        process.exit()
+    })
+    .catch(err => {
+        console.log('Failure!', err)
+        process.exit()
+    })

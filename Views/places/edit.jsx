@@ -1,37 +1,41 @@
 const React = require('react')
 const Def = require('../default.jsx')
 
-function edit_form (data) {
+function edit_form(data) {
     return (
         <Def>
-          <main>
-            <h1>Edit Place</h1>
-            <form method="POST" action={`/places/${data.id}?_method=PUT`}>
-            <div className="row">
-                <div className="form-group col-sm-6">
-                    <label htmlFor="name">Place Name</label>
-                    <input id="name" value={data.place.name} name="name" />
-                </div>
-                <div className="form-group col-sm-6">
-                    <label htmlFor="pic">Place Picture</label>
-                    <input id="pic"value={data.place.pic} name="pic"/>
-                </div>
-                <div className="form-group col-sm-6">
-                    <label htmlFor="city">City</label>
-                    <input id="city"value={data.place.city} name="city"/>
-                </div>
-                <div className="form-group col-sm-6">
-                    <label htmlFor="=state">State</label>
-                    <input id="state"value={data.place.state} name="state"/>
-                </div>
-                <div className="form-group col-sm-6">
-                    <label htmlFor="cusines">Cusines</label>
-                    <input id="cusines"value={data.place.cusines} name="cusines"/>
-                </div>
-                <input className="btn btn-primary" type="submit" value="submit changes" />
-            </div>
-            </form>
-          </main>
+            <main>
+                <h1>Edit Place</h1>
+                <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
+                    <div className="row">
+                        <div className="form-group col-sm-6">
+                            <label htmlFor="name">Place Name</label>
+                            <input className="form-control" id="name" name="name" defaultValue={data.place.name} required />
+                        </div>
+                        <div className="form-group col-sm-6">
+                            <label htmlFor="pic">Place Picture</label>
+                            <input className="form-control" id="pic" name="pic" defaultValue={data.place.pic} />
+                        </div>
+                        <div className="form-group col-sm-6">
+                            <label htmlFor="city">City</label>
+                            <input className="form-control" id="city" name="city" defaultValue={data.place.city} />
+                        </div>
+                        <div className="form-group col-sm-6">
+                            <label htmlFor="=state">State</label>
+                            <input className="form-control" id="state" name="state" defaultValue={data.place.state} />
+                        </div>
+                        <div className="form-group col-sm-6">
+                            <label htmlFor="founded">Founding Year</label>
+                            <input className="form-control" id="founded" name="founded" defaultValue={data.place.founded} />
+                        </div>
+                        <div className="form-group col-sm-6">
+                            <label htmlFor="cusines">Cuisines</label>
+                            <input className="form-control" id="cuisines" name="cuisines" defaultValue={data.place.cuisines} required />
+                        </div>
+                    </div>
+                    <input className="btn btn-primary" type="submit" value="Submit Changes" />
+                </form>
+            </main>
         </Def>
     )
 }
