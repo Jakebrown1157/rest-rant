@@ -7,17 +7,21 @@ function show (data) {
         <Def>
           <main>
             <h1>{ data.place.name }</h1>
-            <h1><img src={ data.place.pic } alt='some random image'></img></h1>
+              <img src={ data.place.pic } alt={data.place.name}></img>
+              <h3> Located in {data.place.city}, {data.place.state}</h3>
+              <h3> Discription</h3>
+              <div> no Reviews </div>
+              <div> no Comments yet</div>
+              <h3> {data.place.showEstaplished()}</h3>
+              <h4> serving {data.place.cuisines}</h4>
             <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
             Edit
             </a>     
-            <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
-            <button type="submit" className="btn btn-danger">
-                Delete
-            </button>
-            </form> 
-            <div> no Reviews </div>
-            <div> no Comments yet</div>
+            <form action={`/breads/${bread.id}?_method=DELETE`} method="POST">
+              <input type='submit' value="DELETE"/>
+            </form>
+
+            
           </main>
         </Def>
     )
