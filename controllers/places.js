@@ -59,14 +59,15 @@ router.get('/:id', (req, res) => {
 //  PUT route
 router.put('/:id', (req, res) => {
   db.Place.findByIdAndUpdate(req.params.id, req.body)
-    .then(() => {
+  .then(() => {
       res.redirect(`/places/${req.params.id}`)
-    })
-    .catch(err => {
+  })
+  .catch(err => {
       console.log('err', err)
       res.render('error404')
-    })
+  })
 })
+
 
 //  Delete route
 router.delete('/:id', (req, res) => {
@@ -83,13 +84,14 @@ router.delete('/:id', (req, res) => {
 //  Edit route
 router.get('/:id/edit', (req, res) => {
   db.Place.findById(req.params.id)
-    .then(place => {
+  .then(place => {
       res.render('places/edit', { place })
-    })
-    .catch(err => {
+  })
+  .catch(err => {
       res.render('error404')
-    })
+  })
 })
+
 // comment route
 router.post('/:id/comment', (req, res) => {
   console.log(req.body)
